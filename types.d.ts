@@ -4,6 +4,8 @@ declare namespace NodeJS {
     GUILD_ID?: string;
     DEV_GUILD_ID?: string;
     CLIENT_ID?: string;
+    MONGODB_URI?: string;
+    INTENTS?: number;
     // add more environment variables and their types here
   }
 }

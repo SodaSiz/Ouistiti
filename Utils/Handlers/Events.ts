@@ -1,6 +1,6 @@
 import {Client} from 'discord.js';
 import {promisify} from 'util';
-import {eventList} from '../Misc/EventList.json';
+import {eventList} from '../Misc/Settings.json';
 import {glob} from 'glob';
 
 const pGlob = promisify(glob);
