@@ -10,8 +10,8 @@ export default {
     if (!message.content.startsWith(prefix)) return;
 
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const cmdName = args[0]?.toLowerCase();
-    if (!cmdName.length) return;
+    const cmdName = args.shift()?.toLowerCase();
+    if (!cmdName) return;
 
     const cmd = client.commands.get(cmdName);
 
