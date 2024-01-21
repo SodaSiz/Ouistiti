@@ -1,6 +1,6 @@
-import {Message, CommandInteraction, MessageEmbed} from 'discord.js';
+import { Message, CommandInteraction, MessageEmbed } from 'discord.js';
 import ClientCustom from '../../types';
-import {embed_var} from '../../Utils/Misc/Settings.json';
+import { embed_var } from '../../Utils/Misc/Settings.json';
 
 export default {
   name: 'ping',
@@ -22,11 +22,11 @@ export default {
           inline: true
         })
       .setTimestamp()
-      .setFooter({text: message.author.username, iconURL: message.author.displayAvatarURL()});
+      .setFooter({ text: message.author.username, iconURL: message.author.displayAvatarURL() });
 
-    message.reply({embeds: [embed]})
+    message.reply({ embeds: [embed] })
   },
-  runSlash: (client: ClientCustom, interaction: CommandInteraction) => {
+  runInteraction: (client: ClientCustom, interaction: CommandInteraction) => {
     const embed = new MessageEmbed()
       .setTitle('🏓 Pong !')
       .setURL('https://youtu.be/dQw4w9WgXcQ')
@@ -42,7 +42,7 @@ export default {
         inline: true
       })
       .setTimestamp()
-      .setFooter({text: interaction.user.username, iconURL: interaction.user.displayAvatarURL()});
-    interaction.reply({embeds: [embed]})
+      .setFooter({ text: interaction.user.username, iconURL: interaction.user.displayAvatarURL() });
+    interaction.reply({ embeds: [embed] })
   }
 }

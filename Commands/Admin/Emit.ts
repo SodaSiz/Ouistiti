@@ -38,7 +38,7 @@ export default {
     }
   ],
 
-  runSlash: (client: ClientCustom, interaction: CommandInteraction) => {
+  runInteraction: (client: ClientCustom, interaction: CommandInteraction) => {
     const evtChoices = interaction.options.getString('event');
 
     if (evtChoices === 'guildCreate')
