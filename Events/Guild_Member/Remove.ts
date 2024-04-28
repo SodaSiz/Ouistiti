@@ -19,8 +19,8 @@ export default {
       )
       .setColor('#FF0000')
       .setTimestamp()
-      .setFooter({text: 'Alan se vengera fort de ce batard du net !'})
-    const leave = client.channels.cache.get(channels.leave) as TextChannel;
+      .setFooter({text: channels.leave.text})
+  const leave = client.channels.cache.get(channels.leave.id) as TextChannel;
     if (!leave) return;
     leave.send({embeds: [embed]})
   }

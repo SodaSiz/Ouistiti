@@ -19,8 +19,8 @@ export default {
       )
       .setColor(`#${embed_var.color}`)
       .setTimestamp()
-      .setFooter({text: 'Encore un nouveau random du web...'})
-    const come = client.channels.cache.get(channels.come) as TextChannel;
+      .setFooter({text: channels.join.id})
+    const come = client.channels.cache.get(channels.join.id) as TextChannel;
     if (!come) return
     come.send({embeds: [embed]})
   }

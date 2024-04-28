@@ -16,7 +16,7 @@ const loadHandlers = async () => {
   }));
 };
 
-process.on('exit', (code) => {console.log(`Le processus s'est arrêté avec le code ${code}`)});
+process.on('exit', (code) => {console.log(`Leprocessus s'est arrêté avec le code ${code}`)});
 process.on('uncaughtException', (err, origin) => {console.log(`UNCAUGHT_EXCEPTION: ERROR:\n${err}\n\nORIGIN:\n${origin}`);});
 process.on('unhandledRejection', (promise, reason) => {console.log(`UNHANDLED_REJECTION: REASON: \n${reason}\n\nPROMISE:\n${promise}`)});
 process.on('warning', (...args) => {console.log('WARNING:\n', ...args)});
